@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aatif Junaid</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:      #f7f6f3;
+    --bg2:     #efede8;
+    --card:    #ffffff;
+    --border:  #e0ddd6;
+    --text:    #1a1916;
+    --muted:   #6b6860;
+    --muted2:  #9c9a93;
+    --accent:  #2563eb;
+    --accent-light: #dbeafe;
+    --green:   #16a34a;
+    --green-light: #dcfce7;
+    --amber:   #d97706;
+    --amber-light: #fef3c7;
+    --font:    'Inter', system-ui, sans-serif;
+    --mono:    'JetBrains Mono', 'Fira Code', monospace;
+    --r:       8px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 50;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 2rem; height: 52px;
+    background: rgba(247,246,243,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-name {
+    font-size: 14px; font-weight: 600;
+    color: var(--text); text-decoration: none;
+    letter-spacing: -0.3px;
+  }
+  .nav-links { display: flex; gap: 1.5rem; }
+  .nav-links a {
+    font-size: 13px; color: var(--muted);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .nav-links a:hover { color: var(--text); }
+
+  /* LAYOUT */
+  .wrap { max-width: 780px; margin: 0 auto; padding: 0 2rem; }
+  section { padding: 4rem 0; }
+
+  hr.div {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 0;
+  }
+
+  /* HERO */
+  .hero { padding: 5rem 0 4rem; }
+  .hero-status {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 12px; color: var(--green);
+    background: var(--green-light);
+    border-radius: 20px; padding: 4px 10px;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+  .hero-status span.dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--green); display: inline-block;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  .hero-sub {
+    font-size: 1rem;
+    color: var(--muted);
+    line-height: 1.75;
+    max-width: 520px;
+    margin-bottom: 2rem;
+  }
+  .hero-cta { display: flex; gap: 8px; flex-wrap: wrap; }
+
+  /* BUTTONS */
+  .btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 9px 16px;
+    border-radius: var(--r);
+    font-size: 13px; font-weight: 500;
+    cursor: pointer; text-decoration: none; border: none;
+    transition: all 0.15s;
+  }
+  .btn-primary {
+    background: var(--text); color: var(--bg);
+  }
+  .btn-primary:hover { background: #333; }
+  .btn-outline {
+    background: transparent; color: var(--muted);
+    border: 1px solid var(--border);
+  }
+  .btn-outline:hover { color: var(--text); border-color: var(--muted2); }
+
+  /* SECTION LABEL */
+  .sec-label {
+    font-size: 11px; font-weight: 600;
+    color: var(--muted2);
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    margin-bottom: 1.75rem;
+  }
+
+  /* ABOUT */
+  .about-text {
+    font-size: 15px; color: var(--muted);
+    line-height: 1.85; max-width: 600px;
+    margin-bottom: 2rem;
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    overflow: hidden;
+  }
+  .about-cell {
+    background: var(--card);
+    padding: 1rem 1.25rem;
+  }
+  .about-cell-label {
+    font-size: 11px; color: var(--muted2);
+    font-weight: 500; letter-spacing: 0.5px;
+    margin-bottom: 3px;
+  }
+  .about-cell-val {
+    font-size: 13.5px; color: var(--text);
+    font-weight: 500;
+  }
+
+  /* SKILLS */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .skill-block {
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    background: var(--card);
+    padding: 1.1rem 1.25rem;
+  }
+  .skill-title {
+    font-size: 11px; font-weight: 600;
+    color: var(--muted2); letter-spacing: 1px;
+    text-transform: uppercase; margin-bottom: 0.7rem;
+  }
+  .chips { display: flex; flex-wrap: wrap; gap: 5px; }
+  .chip {
+    font-size: 12px;
+    padding: 3px 9px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--muted);
+    font-family: var(--mono);
+    cursor: default;
+  }
+
+  /* PROJECTS */
+  .projects { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; }
+  .project {
+    background: var(--card);
+    padding: 1.4rem 1.5rem;
+    text-decoration: none; color: inherit;
+    transition: background 0.15s;
+    display: block;
+  }
+  .project:hover { background: #fafaf8; }
+  .project-top {
+    display: flex; align-items: baseline;
+    justify-content: space-between; gap: 1rem;
+    margin-bottom: 0.45rem;
+  }
+  .project-name {
+    font-size: 14.5px; font-weight: 600;
+    color: var(--text);
+  }
+  .badge {
+    font-size: 11px; font-family: var(--mono);
+    padding: 2px 8px; border-radius: 4px;
+    white-space: nowrap; flex-shrink: 0;
+    border: 1px solid;
+  }
+  .badge-blue  { color: var(--accent); border-color: #bfdbfe; background: var(--accent-light); }
+  .badge-green { color: var(--green);  border-color: #bbf7d0; background: var(--green-light); }
+  .badge-amber { color: var(--amber);  border-color: #fde68a; background: var(--amber-light); }
+  .badge-gray  { color: var(--muted);  border-color: var(--border); background: var(--bg2); }
+
+  .project-desc {
+    font-size: 13.5px; color: var(--muted);
+    line-height: 1.72; margin-bottom: 0.9rem;
+  }
+  .project-meta {
+    display: flex; flex-wrap: wrap; gap: 5px;
+  }
+  .project-meta .chip { font-size: 11px; padding: 2px 7px; }
+
+  /* EXPERIENCE */
+  .timeline { display: flex; flex-direction: column; gap: 1.5rem; }
+  .tl {
+    display: flex; gap: 1rem;
+  }
+  .tl-line {
+    display: flex; flex-direction: column; align-items: center;
+    padding-top: 3px;
+  }
+  .tl-circle {
+    width: 8px; height: 8px; border-radius: 50%;
+    border: 2px solid var(--border);
+    background: var(--card);
+    flex-shrink: 0;
+  }
+  .tl-track {
+    flex: 1; width: 1px;
+    background: var(--border);
+    margin-top: 4px;
+  }
+  .tl-content { flex: 1; padding-bottom: 0.5rem; }
+  .tl-top {
+    display: flex; justify-content: space-between;
+    align-items: flex-start; gap: 0.5rem;
+    margin-bottom: 0.2rem;
+  }
+  .tl-title { font-size: 14px; font-weight: 600; }
+  .tl-org { font-size: 12.5px; color: var(--muted); }
+  .tl-date { font-size: 11.5px; color: var(--muted2); font-family: var(--mono); white-space: nowrap; }
+  .tl-desc { font-size: 13px; color: var(--muted); line-height: 1.72; margin-top: 0.4rem; }
+  .tl-bullets { margin-top: 0.5rem; padding-left: 1rem; display: flex; flex-direction: column; gap: 3px; }
+  .tl-bullets li { font-size: 13px; color: var(--muted); line-height: 1.65; }
+
+  /* CERTIFICATIONS */
+  .cert-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    overflow: hidden;
+  }
+  .cert-item {
+    background: var(--card);
+    padding: 0.85rem 1.1rem;
+  }
+  .cert-name { font-size: 13px; font-weight: 500; color: var(--text); }
+  .cert-by   { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+  /* CONTACT */
+  .contact-links {
+    display: flex; flex-wrap: wrap; gap: 10px;
+    margin-top: 1.25rem;
+  }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    font-size: 12px; color: var(--muted2);
+  }
+
+  /* FADE IN */
+  .fade { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
+  .fade.in { opacity: 1; transform: none; }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    nav { padding: 0 1rem; }
+    .wrap { padding: 0 1rem; }
+    .about-grid, .skills-grid, .cert-grid { grid-template-columns: 1fr; }
+    .project-top { flex-wrap: wrap; }
+    .tl-top { flex-direction: column; }
+    .hero h1 { letter-spacing: -1px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-name" href="#">Aatif Junaid</a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="wrap">
+  <section class="hero">
+    <div class="hero-status"><span class="dot"></span> Open to placements — 2026–27</div>
+    <h1>Aatif Junaid</h1>
+    <p class="hero-sub">
+      ECE student at Netaji Subhas University of Technology, graduating 2027. I build things across machine learning, data science, and embedded electronics — and I care about shipping software that actually works.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">Projects</a>
+      <a href="https://github.com/aatifjunaid" target="_blank" class="btn btn-outline">GitHub</a>
+      <a href="#contact" class="btn btn-outline">Get in touch</a>
+    </div>
+  </section>
+</div>
+
+<hr class="div">
+
+<!-- ABOUT -->
+<div class="wrap">
+  <section id="about" class="fade">
+    <div class="sec-label">About</div>
+    <p class="about-text">
+      I'm a final-year B.Tech ECE student with a growing focus on ML and data science. My projects range from transformer-based NLP pipelines and sentiment analysis dashboards to embedded wearables and digital electronics. I like building things end-to-end — from raw data or hardware to something someone can actually use. I'm actively looking for internship and full-time roles in ML, data science, and electronics/embedded for the 2026–27 placement cycle.
+    </p>
+    <div class="about-grid">
+      <div class="about-cell">
+        <div class="about-cell-label">Degree</div>
+        <div class="about-cell-val">B.Tech Electronics & Communication Engg.</div>
+      </div>
+      <div class="about-cell">
+        <div class="about-cell-label">Graduating</div>
+        <div class="about-cell-val">2027</div>
+      </div>
+      <div class="about-cell">
+        <div class="about-cell-label">GitHub</div>
+        <div class="about-cell-val">aatifjunaid</div>
+      </div>
+      <div class="about-cell">
+        <div class="about-cell-label">Focus areas</div>
+        <div class="about-cell-val">ML · Data Science · Electronics</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<hr class="div">
+
+<!-- SKILLS -->
+<div class="wrap">
+  <section id="skills" class="fade">
+    <div class="sec-label">Skills</div>
+    <div class="skills-grid">
+      <div class="skill-block">
+        <div class="skill-title">Programming Languages</div>
+        <div class="chips">
+          <span class="chip">Python</span>
+          <span class="chip">C++</span>
+          <span class="chip">SQL</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-title">Machine Learning & AI</div>
+        <div class="chips">
+          <span class="chip">Supervised Learning</span>
+          <span class="chip">Classification</span>
+          <span class="chip">Regression</span>
+          <span class="chip">NLP</span>
+          <span class="chip">Reinforcement Learning</span>
+          <span class="chip">Feature Engineering</span>
+          <span class="chip">Model Evaluation</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-title">Libraries & Frameworks</div>
+        <div class="chips">
+          <span class="chip">NumPy</span>
+          <span class="chip">Pandas</span>
+          <span class="chip">scikit-learn</span>
+          <span class="chip">Matplotlib</span>
+          <span class="chip">Seaborn</span>
+          <span class="chip">TensorFlow</span>
+          <span class="chip">Hugging Face</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-title">Data Science</div>
+        <div class="chips">
+          <span class="chip">Data Preprocessing</span>
+          <span class="chip">EDA</span>
+          <span class="chip">Statistical Analysis</span>
+          <span class="chip">Data Cleaning</span>
+          <span class="chip">Data Visualization</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-title">Embedded Systems & Electronics</div>
+        <div class="chips">
+          <span class="chip">Arduino</span>
+          <span class="chip">Microcontrollers</span>
+          <span class="chip">Sensor Integration</span>
+          <span class="chip">Embedded C</span>
+          <span class="chip">Digital Electronics</span>
+          <span class="chip">Verilog / FPGA</span>
+          <span class="chip">VLSI</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-title">Tools & Platforms</div>
+        <div class="chips">
+          <span class="chip">Git / GitHub</span>
+          <span class="chip">MATLAB</span>
+          <span class="chip">LTSpice</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<hr class="div">
+
+<!-- PROJECTS -->
+<div class="wrap">
+  <section id="projects" class="fade">
+    <div class="sec-label">Projects</div>
+    <div class="projects">
+
+      <a class="project" href="https://github.com/aatifjunaid/WhatsApp-Sentiment-Analyzer-Chat-Analytics-Dashboard" target="_blank">
+        <div class="project-top">
+          <span class="project-name">WhatsApp Sentiment Analyzer & Chat Analytics</span>
+          <span class="badge badge-blue">NLP · ML</span>
+        </div>
+        <p class="project-desc">
+          Sentiment analysis pipeline trained on 14,640 tweets — TF-IDF + SVM, Logistic Regression, and DistilBERT — reaching 85.45% 3-class accuracy. Also built a chat analytics engine on top generating 20+ behavioural metrics: response times, messaging patterns, activity trends, double-text frequency. Deployed as a privacy-preserving Streamlit app with Plotly dashboards; all data stays local.
+        </p>
+        <div class="project-meta">
+          <span class="chip">Python</span><span class="chip">Hugging Face</span><span class="chip">scikit-learn</span><span class="chip">Streamlit</span><span class="chip">Plotly</span><span class="chip">NLP</span>
+        </div>
+      </a>
+
+      <a class="project" href="https://github.com/aatifjunaid/PDF-Summarizer-and-QA" target="_blank">
+        <div class="project-top">
+          <span class="project-name">PDF Summarizer with Q&A</span>
+          <span class="badge badge-blue">NLP · Python</span>
+        </div>
+        <p class="project-desc">
+          Built during my internship at NTPC Limited. Accepts any PDF, generates a concise summary, and lets users query the document in natural language. Uses document parsing, text preprocessing, and transformer-based models. Streamlit frontend; cut manual effort in extracting insights from lengthy industrial reports.
+        </p>
+        <div class="project-meta">
+          <span class="chip">Python</span><span class="chip">Transformers</span><span class="chip">PyPDF2</span><span class="chip">Streamlit</span><span class="chip">NLP</span>
+        </div>
+      </a>
+
+      <a class="project" href="https://github.com/aatifjunaid" target="_blank">
+        <div class="project-top">
+          <span class="project-name">ChargeNow — Smart EV Slot Finder</span>
+          <span class="badge badge-green">Hackathon · ET AutoTech 2026</span>
+        </div>
+        <p class="project-desc">
+          EV charging station discovery and slot booking app targeting the Indian market. Python Flask REST API with SQLite backend, real-time map view via Leaflet.js, OCPP compatibility for charger communication. Designed for end-users and station operators both.
+        </p>
+        <div class="project-meta">
+          <span class="chip">Python</span><span class="chip">Flask</span><span class="chip">SQLite</span><span class="chip">Leaflet.js</span><span class="chip">OCPP</span><span class="chip">REST API</span>
+        </div>
+      </a>
+
+      <a class="project" href="https://github.com/aatifjunaid" target="_blank">
+        <div class="project-top">
+          <span class="project-name">Advanced Traffic Light FSM</span>
+          <span class="badge badge-amber">Verilog · Digital Design</span>
+        </div>
+        <p class="project-desc">
+          Verilog FSM for a traffic light controller extended with pedestrian crossing, emergency vehicle override, and night mode. Verified with ModelSim waveform simulation; full timing documentation included.
+        </p>
+        <div class="project-meta">
+          <span class="chip">Verilog</span><span class="chip">ModelSim</span><span class="chip">FSM</span><span class="chip">FPGA</span>
+        </div>
+      </a>
+
+      <a class="project" href="https://github.com/aatifjunaid/Blind-Assistance-Wearable" target="_blank">
+        <div class="project-top">
+          <span class="project-name">Blind Assistance Wearable</span>
+          <span class="badge badge-gray">Embedded · Arduino</span>
+        </div>
+        <p class="project-desc">
+          Wearable obstacle-detection system using Arduino Uno and ultrasonic sensors with haptic and audio feedback. Built with a 3-person team; handled hardware integration, distance-sensing logic, and enclosure prototyping. Compact and battery-powered for real-world use.
+        </p>
+        <div class="project-meta">
+          <span class="chip">Arduino</span><span class="chip">C++</span><span class="chip">Ultrasonic Sensors</span><span class="chip">Embedded C</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+</div>
+
+<hr class="div">
+
+<!-- EXPERIENCE -->
+<div class="wrap">
+  <section id="experience" class="fade">
+    <div class="sec-label">Experience & Education</div>
+    <div class="timeline">
+
+      <div class="tl">
+        <div class="tl-line"><div class="tl-circle"></div><div class="tl-track"></div></div>
+        <div class="tl-content">
+          <div class="tl-top">
+            <div>
+              <div class="tl-title">Summer Trainee / Intern</div>
+              <div class="tl-org">NTPC Limited, Noida</div>
+            </div>
+            <span class="tl-date">Jun – Jul 2025</span>
+          </div>
+          <ul class="tl-bullets">
+            <li>Developed a PDF Summarizer with Q&A using Python and NLP, enabling automated report summarization and natural-language querying over industrial documents.</li>
+            <li>Applied transformer-based models for information retrieval from reports; reduced manual extraction effort significantly.</li>
+            <li>Gained exposure to data-centre infrastructure including servers, networking, cooling systems, and power management.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl">
+        <div class="tl-line"><div class="tl-circle"></div><div class="tl-track"></div></div>
+        <div class="tl-content">
+          <div class="tl-top">
+            <div>
+              <div class="tl-title">B.Tech — Electronics & Communication Engineering</div>
+              <div class="tl-org">Netaji Subhas University of Technology · India</div>
+            </div>
+            <span class="tl-date">2023 – 2027</span>
+          </div>
+          <p class="tl-desc">Pursuing a degree in Electronics & Communication Engineering with coursework in digital design, embedded systems, signals, and communication systems. Alongside academics, I actively explore software development, data structures & algorithms, machine learning, and web technologies through self-driven projects and continuous learning.</p>
+        </div>
+      </div>
+
+      <div class="tl">
+        <div class="tl-line"><div class="tl-circle"></div></div>
+        <div class="tl-content">
+          <div class="tl-top">
+            <div>
+              <div class="tl-title">Amazon ML Summer School — Applicant</div>
+              <div class="tl-org">Amazon India</div>
+            </div>
+            <span class="tl-date">2025</span>
+          </div>
+          <p class="tl-desc">Applied to Amazon's competitive ML Summer School; prepared a detailed Statement of Purpose covering transformer pipelines, NLP projects, and Kaggle competitions.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<hr class="div">
+
+<!-- CERTIFICATIONS -->
+<div class="wrap">
+  <section id="certifications" class="fade">
+    <div class="sec-label">Certifications</div>
+    <div class="cert-grid">
+      <div class="cert-item">
+        <div class="cert-name">Machine Learning Specialization</div>
+        <div class="cert-by">Stanford Online / DeepLearning.AI — Andrew Ng</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-name">Reinforcement Learning</div>
+        <div class="cert-by">IIT Madras </div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-name">Data Analytics with Python</div>
+        <div class="cert-by">IIT Madras</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-name">Intro to ML + SQL + Pandas</div>
+        <div class="cert-by">Kaggle</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-name">McKinsey Forward Program</div>
+        <div class="cert-by">McKinsey & Company — Leadership & Problem-Solving</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-name">Technology Job Simulation</div>
+        <div class="cert-by">Deloitte Australia on Forage · Nov 2025</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-name">Data Structures & Algorithms in C++</div>
+        <div class="cert-by">Coding Blocks</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-name">Design Thinking </div>
+        <div class="cert-by">IIT Madras</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<hr class="div">
+
+<!-- ACHIEVEMENTS -->
+<div class="wrap">
+  <section id="achievements" class="fade">
+    <div class="sec-label">Achievements & Activities</div>
+    <div class="cert-grid">
+      <div class="cert-item">
+        <div class="cert-name">Scholar Badge & Scholar Blazer</div>
+        <div class="cert-by">Consistent academic excellence in school</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-name">Runner-up — District Level Tennis Tournament</div>
+        <div class="cert-by">U15 · Pathways School, Noida</div>
+      </div>
+      <div class="cert-item" style="grid-column: 1 / -1;">
+        <div class="cert-name">Member, College Football Team</div>
+        <div class="cert-by">Representing the college in inter-collegiate football</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<hr class="div">
+
+<!-- CONTACT -->
+<div class="wrap">
+  <section id="contact" class="fade">
+    <div class="sec-label">Contact</div>
+    <p style="font-size:14px;color:var(--muted);line-height:1.8;max-width:480px;">
+      Open to full-time SDE, ML, and embedded roles. I usually respond within 24 hours.
+    </p>
+    <div class="contact-links">
+      <a href="mailto:aatiflm10@gmail.com" class="btn btn-primary">aatiflm10@gmail.com</a>
+      <a href="https://linkedin.com/in/aatifjunaid" target="_blank" class="btn btn-outline">LinkedIn</a>
+      <a href="https://github.com/aatifjunaid" target="_blank" class="btn btn-outline">GitHub</a>
+      <a href="resume.pdf" download class="btn btn-outline">Resume PDF</a>
+    </div>
+  </section>
+</div>
+
+<footer>Aatif Junaid · 2026</footer>
+
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
