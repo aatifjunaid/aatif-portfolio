@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aatif Junaid</title>
+<title>Aatif Junaid — ECE | Digital Design & Embedded</title>
+<meta name="description" content="Final-year ECE student at NSUT focused on digital design, VLSI, RTL verification and embedded systems.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -94,7 +95,7 @@
     font-size: 1rem;
     color: var(--muted);
     line-height: 1.75;
-    max-width: 520px;
+    max-width: 540px;
     margin-bottom: 2rem;
   }
   .hero-cta { display: flex; gap: 8px; flex-wrap: wrap; }
@@ -126,6 +127,12 @@
     text-transform: uppercase;
     margin-bottom: 1.75rem;
   }
+  .sub-label {
+    font-size: 12px; font-weight: 500;
+    color: var(--muted);
+    margin: 0 0 0.75rem;
+  }
+  .sub-label.spaced { margin-top: 2rem; }
 
   /* ABOUT */
   .about-text {
@@ -155,6 +162,8 @@
     font-size: 13.5px; color: var(--text);
     font-weight: 500;
   }
+  .about-cell-val a { color: var(--accent); text-decoration: none; }
+  .about-cell-val a:hover { text-decoration: underline; }
 
   /* SKILLS */
   .skills-grid {
@@ -295,6 +304,7 @@
   /* RESPONSIVE */
   @media (max-width: 600px) {
     nav { padding: 0 1rem; }
+    .nav-links { gap: 1rem; }
     .wrap { padding: 0 1rem; }
     .about-grid, .skills-grid, .cert-grid { grid-template-columns: 1fr; }
     .project-top { flex-wrap: wrap; }
@@ -309,6 +319,7 @@
   <a class="nav-name" href="#">Aatif Junaid</a>
   <div class="nav-links">
     <a href="#about">About</a>
+    <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#experience">Experience</a>
     <a href="#contact">Contact</a>
@@ -318,14 +329,15 @@
 <!-- HERO -->
 <div class="wrap">
   <section class="hero">
-    <div class="hero-status"><span class="dot"></span> Open to placements — 2026–27</div>
+    <div class="hero-status"><span class="dot"></span> Open to ECE roles — 2026–27</div>
     <h1>Aatif Junaid</h1>
     <p class="hero-sub">
-      ECE student at NSUT graduating in 2027. Interested in software development, AI/ML, and embedded systems. I enjoy building practical projects and continuously improving my problem-solving skills through coding and hands-on learning.
+      ECE student at NSUT graduating in 2027. Focused on digital design, VLSI and embedded systems — from writing and verifying RTL in Verilog to building microcontroller-based hardware. I like understanding how things work at the logic and circuit level, and building them end-to-end.
     </p>
     <div class="hero-cta">
       <a href="#projects" class="btn btn-primary">Projects</a>
-      <a href="https://github.com/aatifjunaid" target="_blank" class="btn btn-outline">GitHub</a>
+      <a href="https://github.com/aatifjunaid" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
+      <a href="https://hdlbits.01xz.net/wiki/Special:VlgStats/BC2A40219AFBD89" target="_blank" rel="noopener" class="btn btn-outline">HDLBits</a>
       <a href="#contact" class="btn btn-outline">Get in touch</a>
     </div>
   </section>
@@ -338,7 +350,7 @@
   <section id="about" class="fade">
     <div class="sec-label">About</div>
     <p class="about-text">
-      I'm a final-year B.Tech ECE student with a growing focus on ML and data science. My projects range from transformer-based NLP pipelines and sentiment analysis dashboards to embedded wearables and digital electronics. I like building things end-to-end — from raw data or hardware to something someone can actually use. I'm actively looking for full-time Software Engineer (SDE), Machine Learning Engineer, Data Science, and Embedded Systems roles for the 2026–27 placement cycle.
+      I'm a final-year B.Tech ECE student with a focus on digital design, RTL and verification, and embedded systems. My hardware work includes FSM-based Verilog designs verified with testbenches and waveform simulation, and an Arduino-based wearable built with a team. I also have a software and ML background — NLP pipelines and data apps — which helps with scripting, automation and tooling. I'm looking for full-time ECE roles in VLSI design and verification, digital design, embedded systems and electronics for the 2026–27 placement cycle.
     </p>
     <div class="about-grid">
       <div class="about-cell">
@@ -347,15 +359,23 @@
       </div>
       <div class="about-cell">
         <div class="about-cell-label">Graduating</div>
-        <div class="about-cell-val">2027</div>
-      </div>
-      <div class="about-cell">
-        <div class="about-cell-label">GitHub</div>
-        <div class="about-cell-val">aatifjunaid</div>
+        <div class="about-cell-val">2027 · CGPA 8.13</div>
       </div>
       <div class="about-cell">
         <div class="about-cell-label">Focus areas</div>
-        <div class="about-cell-val">SDE · ML · Data Science · Electronics</div>
+        <div class="about-cell-val">Digital Design · VLSI · Verification · Embedded</div>
+      </div>
+      <div class="about-cell">
+        <div class="about-cell-label">Verilog practice</div>
+        <div class="about-cell-val"><a href="https://hdlbits.01xz.net/wiki/Special:VlgStats/BC2A40219AFBD89" target="_blank" rel="noopener">HDLBits profile ↗</a></div>
+      </div>
+      <div class="about-cell">
+        <div class="about-cell-label">GitHub</div>
+        <div class="about-cell-val"><a href="https://github.com/aatifjunaid" target="_blank" rel="noopener">aatifjunaid</a></div>
+      </div>
+      <div class="about-cell">
+        <div class="about-cell-label">Also work in</div>
+        <div class="about-cell-val">Python · ML · Software</div>
       </div>
     </div>
   </section>
@@ -369,15 +389,49 @@
     <div class="sec-label">Skills</div>
     <div class="skills-grid">
       <div class="skill-block">
+        <div class="skill-title">HDL & Digital Design</div>
+        <div class="chips">
+          <span class="chip">Verilog HDL</span>
+          <span class="chip">RTL Design</span>
+          <span class="chip">FSM Design</span>
+          <span class="chip">Testbenches</span>
+          <span class="chip">Digital Electronics</span>
+          <span class="chip">FPGA</span>
+          <span class="chip">VLSI</span>
+          <span class="chip">CPU Pipelines</span>
+          <span class="chip">Cache Memory</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-title">Embedded Systems & Electronics</div>
+        <div class="chips">
+          <span class="chip">Arduino</span>
+          <span class="chip">Microcontrollers</span>
+          <span class="chip">Sensor Integration</span>
+          <span class="chip">Embedded C</span>
+          <span class="chip">Hardware Prototyping</span>
+        </div>
+      </div>
+      <div class="skill-block">
         <div class="skill-title">Programming Languages</div>
         <div class="chips">
-          <span class="chip">Python</span>
+          <span class="chip">C</span>
           <span class="chip">C++</span>
+          <span class="chip">Python</span>
           <span class="chip">SQL</span>
         </div>
       </div>
       <div class="skill-block">
-        <div class="skill-title">Machine Learning & AI</div>
+        <div class="skill-title">Simulation & Tools</div>
+        <div class="chips">
+          <span class="chip">ModelSim</span>
+          <span class="chip">MATLAB</span>
+          <span class="chip">LTSpice</span>
+          <span class="chip">Git / GitHub</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-title">Machine Learning & Data</div>
         <div class="chips">
           <span class="chip">Supervised Learning</span>
           <span class="chip">Classification</span>
@@ -385,7 +439,8 @@
           <span class="chip">NLP</span>
           <span class="chip">Reinforcement Learning</span>
           <span class="chip">Feature Engineering</span>
-          <span class="chip">Model Evaluation</span>
+          <span class="chip">EDA</span>
+          <span class="chip">Data Visualization</span>
         </div>
       </div>
       <div class="skill-block">
@@ -400,36 +455,6 @@
           <span class="chip">Hugging Face</span>
         </div>
       </div>
-      <div class="skill-block">
-        <div class="skill-title">Data Science</div>
-        <div class="chips">
-          <span class="chip">Data Preprocessing</span>
-          <span class="chip">EDA</span>
-          <span class="chip">Statistical Analysis</span>
-          <span class="chip">Data Cleaning</span>
-          <span class="chip">Data Visualization</span>
-        </div>
-      </div>
-      <div class="skill-block">
-        <div class="skill-title">Embedded Systems & Electronics</div>
-        <div class="chips">
-          <span class="chip">Arduino</span>
-          <span class="chip">Microcontrollers</span>
-          <span class="chip">Sensor Integration</span>
-          <span class="chip">Embedded C</span>
-          <span class="chip">Digital Electronics</span>
-          <span class="chip">Verilog / FPGA</span>
-          <span class="chip">VLSI</span>
-        </div>
-      </div>
-      <div class="skill-block">
-        <div class="skill-title">Tools & Platforms</div>
-        <div class="chips">
-          <span class="chip">Git / GitHub</span>
-          <span class="chip">MATLAB</span>
-          <span class="chip">LTSpice</span>
-        </div>
-      </div>
     </div>
   </section>
 </div>
@@ -440,61 +465,24 @@
 <div class="wrap">
   <section id="projects" class="fade">
     <div class="sec-label">Projects</div>
+
+    <div class="sub-label">Hardware & Embedded</div>
     <div class="projects">
 
-       <a class="project" href="https://github.com/aatifjunaid/UART_Transmitter" target="_blank">
+      <a class="project" href="https://github.com/aatifjunaid/UART_Transmitter" target="_blank" rel="noopener">
         <div class="project-top">
           <span class="project-name">UART Transmitter</span>
-          <span class="badge badge-amber">Verilog HDL· RTL Design </span>
+          <span class="badge badge-amber">Verilog HDL · RTL Design</span>
         </div>
         <p class="project-desc">
-          RTL implementation of an 8-bit UART Transmitter in Verilog HDL using a Finite State Machine (FSM). Implements baud-rate control, serial data transmission through a shift register, and was verified using a custom Verilog testbench with simulation waveforms.
+          RTL implementation of an 8-bit UART Transmitter in Verilog HDL using a Finite State Machine (FSM). Implements baud-rate control and serial data transmission through a shift register, and was verified using a custom Verilog testbench with simulation waveforms.
         </p>
         <div class="project-meta">
-          <span class="chip">Verilog HDL</span><span class="chip"> FSM</span><span class="chip">RTL</span><span class="chip">Testbench</span>
-        </div>
-       </a>
-
-      <a class="project" href="https://github.com/aatifjunaid/WhatsApp-Sentiment-Analyzer-Chat-Analytics-Dashboard" target="_blank">
-        <div class="project-top">
-          <span class="project-name">WhatsApp Sentiment Analyzer & Chat Analytics</span>
-          <span class="badge badge-blue">NLP · ML</span>
-        </div>
-        <p class="project-desc">
-          Sentiment analysis pipeline trained on 14,640 tweets — TF-IDF + SVM, Logistic Regression, and DistilBERT — reaching 85.45% 3-class accuracy. Also built a chat analytics engine on top generating 20+ behavioural metrics: response times, messaging patterns, activity trends, double-text frequency. Deployed as a privacy-preserving Streamlit app with Plotly dashboards; all data stays local.
-        </p>
-        <div class="project-meta">
-          <span class="chip">Python</span><span class="chip">Hugging Face</span><span class="chip">scikit-learn</span><span class="chip">Streamlit</span><span class="chip">Plotly</span><span class="chip">NLP</span>
+          <span class="chip">Verilog HDL</span><span class="chip">FSM</span><span class="chip">RTL</span><span class="chip">Testbench</span>
         </div>
       </a>
 
-      <a class="project" href="https://github.com/aatifjunaid/PDF-Summarizer-and-QA" target="_blank">
-        <div class="project-top">
-          <span class="project-name">PDF Summarizer with Q&A</span>
-          <span class="badge badge-blue">NLP · Python</span>
-        </div>
-        <p class="project-desc">
-          Built during my internship at NTPC Limited. Accepts any PDF, generates a concise summary, and lets users query the document in natural language. Uses document parsing, text preprocessing, and transformer-based models. Streamlit frontend; cut manual effort in extracting insights from lengthy industrial reports.
-        </p>
-        <div class="project-meta">
-          <span class="chip">Python</span><span class="chip">Transformers</span><span class="chip">PyPDF2</span><span class="chip">Streamlit</span><span class="chip">NLP</span>
-        </div>
-      </a>
-
-      <a class="project" href="https://github.com/aatifjunaid/Charge_Now" target="_blank">
-        <div class="project-top">
-          <span class="project-name">ChargeNow — Smart EV Slot Finder</span>
-          <span class="badge badge-green">Hackathon · ET AutoTech 2026</span>
-        </div>
-        <p class="project-desc">
-          EV charging station discovery and slot booking app targeting the Indian market. Python Flask REST API with SQLite backend, real-time map view via Leaflet.js, OCPP compatibility for charger communication. Designed for end-users and station operators both.
-        </p>
-        <div class="project-meta">
-          <span class="chip">Python</span><span class="chip">Flask</span><span class="chip">SQLite</span><span class="chip">Leaflet.js</span><span class="chip">OCPP</span><span class="chip">REST API</span>
-        </div>
-      </a>
-
-      <a class="project" href="https://github.com/aatifjunaid" target="_blank">
+      <a class="project" href="https://github.com/aatifjunaid" target="_blank" rel="noopener">
         <div class="project-top">
           <span class="project-name">Advanced Traffic Light FSM</span>
           <span class="badge badge-amber">Verilog · Digital Design</span>
@@ -507,16 +495,60 @@
         </div>
       </a>
 
-      <a class="project" href="https://github.com/aatifjunaid/Blind-Assistance-Wearable" target="_blank">
+      <a class="project" href="https://github.com/aatifjunaid/Blind-Assistance-Wearable" target="_blank" rel="noopener">
         <div class="project-top">
           <span class="project-name">Blind Assistance Wearable</span>
           <span class="badge badge-gray">Embedded · Arduino</span>
         </div>
         <p class="project-desc">
-          Wearable obstacle-detection system using Arduino Uno and ultrasonic sensors with haptic and audio feedback. Built with a 3-person team; handled hardware integration, distance-sensing logic, and enclosure prototyping. Compact and battery-powered for real-world use.
+          Wearable obstacle and elevation detection system using Arduino Uno and dual ultrasonic sensors, with buzzer alerts for the user. Built with a 3-person team; handled hardware integration, distance-sensing logic, and enclosure prototyping. Compact and battery-powered for real-world use.
         </p>
         <div class="project-meta">
           <span class="chip">Arduino</span><span class="chip">C++</span><span class="chip">Ultrasonic Sensors</span><span class="chip">Embedded C</span>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="sub-label spaced">Software & ML</div>
+    <div class="projects">
+
+      <a class="project" href="https://github.com/aatifjunaid/Charge_Now" target="_blank" rel="noopener">
+        <div class="project-top">
+          <span class="project-name">ChargeNow — Smart EV Slot Finder</span>
+          <span class="badge badge-green">Hackathon · ET AutoTech 2026</span>
+        </div>
+        <p class="project-desc">
+          EV charging station discovery and slot booking app targeting the Indian market. Python Flask REST API with SQLite backend, real-time map view via Leaflet.js, OCPP compatibility for charger communication. Designed for end-users and station operators both.
+        </p>
+        <div class="project-meta">
+          <span class="chip">Python</span><span class="chip">Flask</span><span class="chip">SQLite</span><span class="chip">Leaflet.js</span><span class="chip">OCPP</span><span class="chip">REST API</span>
+        </div>
+      </a>
+
+      <a class="project" href="https://github.com/aatifjunaid/WhatsApp-Sentiment-Analyzer-Chat-Analytics-Dashboard" target="_blank" rel="noopener">
+        <div class="project-top">
+          <span class="project-name">WhatsApp Sentiment Analyzer & Chat Analytics</span>
+          <span class="badge badge-blue">NLP · ML</span>
+        </div>
+        <p class="project-desc">
+          Sentiment analysis pipeline trained on 14,640 tweets — TF-IDF + SVM, Logistic Regression, and DistilBERT — reaching 85.45% 3-class accuracy. Also built a chat analytics engine on top generating 20+ behavioural metrics: response times, messaging patterns, activity trends, double-text frequency. Deployed as a privacy-preserving Streamlit app with Plotly dashboards; all data stays local.
+        </p>
+        <div class="project-meta">
+          <span class="chip">Python</span><span class="chip">Hugging Face</span><span class="chip">scikit-learn</span><span class="chip">Streamlit</span><span class="chip">Plotly</span><span class="chip">NLP</span>
+        </div>
+      </a>
+
+      <a class="project" href="https://github.com/aatifjunaid/PDF-Summarizer-and-QA" target="_blank" rel="noopener">
+        <div class="project-top">
+          <span class="project-name">PDF Summarizer with Q&A</span>
+          <span class="badge badge-blue">NLP · Python</span>
+        </div>
+        <p class="project-desc">
+          Built during my internship at NTPC Limited. Accepts any PDF, generates a concise summary, and lets users query the document in natural language. Uses document parsing, text preprocessing, and transformer-based models. Streamlit frontend; cut manual effort in extracting insights from lengthy industrial reports.
+        </p>
+        <div class="project-meta">
+          <span class="chip">Python</span><span class="chip">Transformers</span><span class="chip">PyPDF2</span><span class="chip">Streamlit</span><span class="chip">NLP</span>
         </div>
       </a>
 
@@ -543,9 +575,9 @@
             <span class="tl-date">Jun – Jul 2025</span>
           </div>
           <ul class="tl-bullets">
+            <li>Gained exposure to data-centre infrastructure including servers, networking, cooling systems, and power management.</li>
             <li>Developed a PDF Summarizer with Q&A using Python and NLP, enabling automated report summarization and natural-language querying over industrial documents.</li>
             <li>Applied transformer-based models for information retrieval from reports; reduced manual extraction effort significantly.</li>
-            <li>Gained exposure to data-centre infrastructure including servers, networking, cooling systems, and power management.</li>
           </ul>
         </div>
       </div>
@@ -556,15 +588,13 @@
           <div class="tl-top">
             <div>
               <div class="tl-title">B.Tech — Electronics & Communication Engineering</div>
-              <div class="tl-org">Netaji Subhas University of Technology · India</div>
+              <div class="tl-org">Netaji Subhas University of Technology · India · CGPA 8.13</div>
             </div>
             <span class="tl-date">2023 – 2027</span>
           </div>
-          <p class="tl-desc">Pursuing a degree in Electronics & Communication Engineering with coursework in digital design, embedded systems, signals, and communication systems. Alongside academics, I actively explore software development, data structures & algorithms, machine learning, and web technologies through self-driven projects and continuous learning.</p>
+          <p class="tl-desc">Coursework in digital design, VLSI, embedded systems, signals, and communication systems. Alongside academics, I practise Verilog on HDLBits, build hardware and embedded projects, and explore software development and machine learning through self-driven projects.</p>
         </div>
       </div>
-
-    
 
     </div>
   </section>
@@ -578,24 +608,32 @@
     <div class="sec-label">Certifications</div>
     <div class="cert-grid">
       <div class="cert-item">
+        <div class="cert-name">Verilog HDL: VLSI Hardware Design Comprehensive Masterclass</div>
+        <div class="cert-by">Udemy</div>
+      </div>
+      <div class="cert-item">
         <div class="cert-name">Machine Learning Specialization</div>
         <div class="cert-by">Stanford Online / DeepLearning.AI — Andrew Ng</div>
       </div>
       <div class="cert-item">
         <div class="cert-name">Reinforcement Learning</div>
-        <div class="cert-by">IIT Madras </div>
+        <div class="cert-by">IIT Madras</div>
       </div>
       <div class="cert-item">
         <div class="cert-name">Data Analytics with Python</div>
         <div class="cert-by">IIT Madras</div>
       </div>
       <div class="cert-item">
+        <div class="cert-name">Data Structures & Algorithms in C++</div>
+        <div class="cert-by">Coding Blocks</div>
+      </div>
+      <div class="cert-item">
         <div class="cert-name">Intro to ML + SQL + Pandas</div>
         <div class="cert-by">Kaggle</div>
       </div>
       <div class="cert-item">
-        <div class="cert-name">Verilog HDL: VLSI Hardware Design Comprehensive Masterclass</div>
-        <div class="cert-by">Udemy</div>
+        <div class="cert-name">Design Thinking</div>
+        <div class="cert-by">IIT Madras</div>
       </div>
       <div class="cert-item">
         <div class="cert-name">McKinsey Forward Program</div>
@@ -606,34 +644,24 @@
         <div class="cert-by">Deloitte Australia on Forage · Nov 2025</div>
       </div>
       <div class="cert-item">
-        <div class="cert-name">Data Structures & Algorithms in C++</div>
-        <div class="cert-by">Coding Blocks</div>
-      </div>
-      <div class="cert-item">
-        <div class="cert-name">Design Thinking </div>
-        <div class="cert-by">IIT Madras</div>
-      </div>
-      <div class="cert-item">
         <div class="cert-name">DELE A1 Spanish</div>
         <div class="cert-by">Instituto Cervantes - New Delhi</div>
       </div>
-    </div>
     </div>
   </section>
 </div>
 
 <hr class="div">
 
-<!-- ACHIEVEMENTS -->
+<!-- EXTRACURRICULAR -->
 <div class="wrap">
   <section id="achievements" class="fade">
     <div class="sec-label">Extracurricular Activities</div>
-      <div class="cert-grid">
-        <div class="cert-item" style="grid-column: 1 / -1;">
-          <div class="cert-name">Member, University Football Team</div>
-          <div class="cert-by">Representing the college in inter-collegiate football</div>
-        </div>
-     
+    <div class="cert-grid">
+      <div class="cert-item" style="grid-column: 1 / -1;">
+        <div class="cert-name">Member, University Football Team</div>
+        <div class="cert-by">Representing the college in inter-collegiate football</div>
+      </div>
       <div class="cert-item" style="grid-column: 1 / -1;">
         <div class="cert-name">Runner-up — District Level Tennis Tournament</div>
         <div class="cert-by">U15 · Pathways School, Noida</div>
@@ -649,12 +677,13 @@
   <section id="contact" class="fade">
     <div class="sec-label">Contact</div>
     <p style="font-size:14px;color:var(--muted);line-height:1.8;max-width:480px;">
-      Open to full-time SDE, ML, and embedded roles. I usually respond within 24 hours.
+      Open to full-time ECE roles — VLSI design and verification, digital design, and embedded systems. I usually respond within 24 hours.
     </p>
     <div class="contact-links">
       <a href="mailto:aatiflm10@gmail.com" class="btn btn-primary">aatiflm10@gmail.com</a>
-      <a href="https://linkedin.com/in/aatifjunaid" target="_blank" class="btn btn-outline">LinkedIn</a>
-      <a href="https://github.com/aatifjunaid" target="_blank" class="btn btn-outline">GitHub</a>
+      <a href="https://linkedin.com/in/aatifjunaid" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
+      <a href="https://github.com/aatifjunaid" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
+      <a href="https://hdlbits.01xz.net/wiki/Special:VlgStats/BC2A40219AFBD89" target="_blank" rel="noopener" class="btn btn-outline">HDLBits</a>
       <a href="resume.pdf" download class="btn btn-outline">Resume PDF</a>
     </div>
   </section>
