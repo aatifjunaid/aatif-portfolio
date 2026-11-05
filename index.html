@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aatif Junaid — ECE | Digital Design & Embedded</title>
-<meta name="description" content="Final-year ECE student at NSUT focused on digital design, VLSI, RTL verification and embedded systems.">
+<title>Aatif Junaid — ECE | Processor Design & Verification</title>
+<meta name="description" content="Final-year ECE student at NSUT focused on processor design, RTL verification (SystemVerilog, SVA) and digital design.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -228,6 +228,11 @@
     font-size: 13.5px; color: var(--muted);
     line-height: 1.72; margin-bottom: 0.9rem;
   }
+  .project-bullets {
+    margin: 0 0 0.9rem; padding-left: 1.1rem;
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .project-bullets li { font-size: 13.5px; color: var(--muted); line-height: 1.65; }
   .project-meta {
     display: flex; flex-wrap: wrap; gap: 5px;
   }
@@ -332,7 +337,7 @@
     <div class="hero-status"><span class="dot"></span> Open to ECE roles — 2026–27</div>
     <h1>Aatif Junaid</h1>
     <p class="hero-sub">
-      ECE student at NSUT graduating in 2027. Focused on digital design, VLSI and embedded systems — from writing and verifying RTL in Verilog to building microcontroller-based hardware. I like understanding how things work at the logic and circuit level, and building them end-to-end.
+      Final-year ECE student at NSUT targeting processor design and verification. I work in RTL design, pipelined processor architecture, constrained-random verification, SVA and functional coverage — from writing Verilog to proving it correct.
     </p>
     <div class="hero-cta">
       <a href="#projects" class="btn btn-primary">Projects</a>
@@ -350,7 +355,7 @@
   <section id="about" class="fade">
     <div class="sec-label">About</div>
     <p class="about-text">
-      I'm a final-year B.Tech ECE student with a focus on digital design, RTL and verification, and embedded systems. My hardware work includes FSM-based Verilog designs verified with testbenches and waveform simulation, and an Arduino-based wearable built with a team. I also have a software and ML background — NLP pipelines and data apps — which helps with scripting, automation and tooling. I'm looking for full-time ECE roles in VLSI design and verification, digital design, embedded systems and electronics for the 2026–27 placement cycle.
+      I'm a final-year B.Tech ECE student focused on processor design and hardware verification. My work includes a 5-stage pipelined RV32I core checked against a single-cycle reference model, a class-based constrained-random testbench that reached 100% functional coverage on a synchronous FIFO, and a UART transmitter taken through Yosys synthesis. I also have an embedded systems project and a software and ML background, which helps with scripting and tooling. I'm looking for full-time ECE roles in design verification, RTL design, VLSI and embedded systems for the 2026–27 placement cycle.
     </p>
     <div class="about-grid">
       <div class="about-cell">
@@ -363,11 +368,11 @@
       </div>
       <div class="about-cell">
         <div class="about-cell-label">Focus areas</div>
-        <div class="about-cell-val">Digital Design · VLSI · Verification · Embedded</div>
+        <div class="about-cell-val">Processor Design · Verification · RTL · VLSI</div>
       </div>
       <div class="about-cell">
         <div class="about-cell-label">Verilog practice</div>
-        <div class="about-cell-val"><a href="https://hdlbits.01xz.net/wiki/Special:VlgStats/BC2A40219AFBD89" target="_blank" rel="noopener">HDLBits profile ↗</a></div>
+        <div class="about-cell-val"><a href="https://hdlbits.01xz.net/wiki/Special:VlgStats/BC2A40219AFBD89" target="_blank" rel="noopener">HDLBits · 170+ solved ↗</a></div>
       </div>
       <div class="about-cell">
         <div class="about-cell-label">GitHub</div>
@@ -375,7 +380,7 @@
       </div>
       <div class="about-cell">
         <div class="about-cell-label">Also work in</div>
-        <div class="about-cell-val">Python · ML · Software</div>
+        <div class="about-cell-val">Embedded · Python · ML</div>
       </div>
     </div>
   </section>
@@ -389,68 +394,68 @@
     <div class="sec-label">Skills</div>
     <div class="skills-grid">
       <div class="skill-block">
-        <div class="skill-title">HDL & Digital Design</div>
+        <div class="skill-title">HDL & Verification</div>
         <div class="chips">
           <span class="chip">Verilog HDL</span>
+          <span class="chip">SystemVerilog</span>
+          <span class="chip">SVA</span>
+          <span class="chip">Constrained-Random</span>
+          <span class="chip">Functional Coverage</span>
+          <span class="chip">Self-Checking TBs</span>
           <span class="chip">RTL Design</span>
           <span class="chip">FSM Design</span>
-          <span class="chip">Testbenches</span>
-          <span class="chip">Digital Electronics</span>
-          <span class="chip">FPGA</span>
-          <span class="chip">VLSI</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-title">Architecture & Coursework</div>
+        <div class="chips">
           <span class="chip">CPU Pipelines</span>
+          <span class="chip">Pipeline Hazards</span>
           <span class="chip">Cache Memory</span>
+          <span class="chip">Microprocessor Arch.</span>
+          <span class="chip">Static Timing Analysis</span>
+          <span class="chip">Digital Logic Design</span>
         </div>
       </div>
       <div class="skill-block">
-        <div class="skill-title">Embedded Systems & Electronics</div>
+        <div class="skill-title">Programming & Scripting</div>
         <div class="chips">
-          <span class="chip">Arduino</span>
-          <span class="chip">Microcontrollers</span>
-          <span class="chip">Sensor Integration</span>
-          <span class="chip">Embedded C</span>
-          <span class="chip">Hardware Prototyping</span>
-        </div>
-      </div>
-      <div class="skill-block">
-        <div class="skill-title">Programming Languages</div>
-        <div class="chips">
-          <span class="chip">C</span>
-          <span class="chip">C++</span>
           <span class="chip">Python</span>
+          <span class="chip">C++</span>
+          <span class="chip">C</span>
+          <span class="chip">Tcl</span>
           <span class="chip">SQL</span>
         </div>
       </div>
       <div class="skill-block">
-        <div class="skill-title">Simulation & Tools</div>
+        <div class="skill-title">Tools & Platforms</div>
         <div class="chips">
-          <span class="chip">ModelSim</span>
+          <span class="chip">Cadence Xcelium</span>
+          <span class="chip">Icarus Verilog</span>
+          <span class="chip">Yosys</span>
+          <span class="chip">Git / GitHub</span>
           <span class="chip">MATLAB</span>
           <span class="chip">LTSpice</span>
-          <span class="chip">Git / GitHub</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-title">Embedded Systems</div>
+        <div class="chips">
+          <span class="chip">Arduino</span>
+          <span class="chip">Microcontrollers</span>
+          <span class="chip">Sensor Integration</span>
+          <span class="chip">Hardware Prototyping</span>
         </div>
       </div>
       <div class="skill-block">
         <div class="skill-title">Machine Learning & Data</div>
         <div class="chips">
-          <span class="chip">Supervised Learning</span>
-          <span class="chip">Classification</span>
-          <span class="chip">Regression</span>
           <span class="chip">NLP</span>
+          <span class="chip">Classification</span>
           <span class="chip">Reinforcement Learning</span>
-          <span class="chip">Feature Engineering</span>
-          <span class="chip">EDA</span>
-          <span class="chip">Data Visualization</span>
-        </div>
-      </div>
-      <div class="skill-block">
-        <div class="skill-title">Libraries & Frameworks</div>
-        <div class="chips">
           <span class="chip">NumPy</span>
           <span class="chip">Pandas</span>
           <span class="chip">scikit-learn</span>
-          <span class="chip">Matplotlib</span>
-          <span class="chip">Seaborn</span>
           <span class="chip">TensorFlow</span>
           <span class="chip">Hugging Face</span>
         </div>
@@ -466,45 +471,67 @@
   <section id="projects" class="fade">
     <div class="sec-label">Projects</div>
 
-    <div class="sub-label">Hardware & Embedded</div>
+    <div class="sub-label">Hardware, Design & Verification</div>
     <div class="projects">
 
-      <a class="project" href="https://github.com/aatifjunaid/UART_Transmitter" target="_blank" rel="noopener">
+      <a class="project" href="https://github.com/aatifjunaid" target="_blank" rel="noopener">
         <div class="project-top">
-          <span class="project-name">UART Transmitter</span>
-          <span class="badge badge-amber">Verilog HDL · RTL Design</span>
+          <span class="project-name">5-Stage Pipelined RISC-V (RV32I) Core</span>
+          <span class="badge badge-amber">Verilog · SystemVerilog · SVA</span>
         </div>
-        <p class="project-desc">
-          RTL implementation of an 8-bit UART Transmitter in Verilog HDL using a Finite State Machine (FSM). Implements baud-rate control and serial data transmission through a shift register, and was verified using a custom Verilog testbench with simulation waveforms.
-        </p>
+        <ul class="project-bullets">
+          <li>Designed a 5-stage pipelined core supporting 8 instructions, with data forwarding, a 1-cycle load-use stall and a 2-instruction branch flush.</li>
+          <li>Verified with a self-checking testbench running 5 assembly programs against a single-cycle reference model, comparing all 32 registers and 256 memory words (5/5 passing).</li>
+          <li>Added 4 SVA assertions: x0 = 0, stall only on load-use, flush only on taken branch, bubble insertion.</li>
+        </ul>
         <div class="project-meta">
-          <span class="chip">Verilog HDL</span><span class="chip">FSM</span><span class="chip">RTL</span><span class="chip">Testbench</span>
+          <span class="chip">Verilog</span><span class="chip">SystemVerilog</span><span class="chip">SVA</span><span class="chip">Pipelining</span><span class="chip">Hazards</span>
         </div>
       </a>
 
       <a class="project" href="https://github.com/aatifjunaid" target="_blank" rel="noopener">
         <div class="project-top">
-          <span class="project-name">Advanced Traffic Light FSM</span>
-          <span class="badge badge-amber">Verilog · Digital Design</span>
+          <span class="project-name">Synchronous FIFO Verification</span>
+          <span class="badge badge-amber">SystemVerilog · SVA · Coverage</span>
         </div>
-        <p class="project-desc">
-          Verilog FSM for a traffic light controller extended with pedestrian crossing, emergency vehicle override, and night mode. Verified with ModelSim waveform simulation; full timing documentation included.
-        </p>
+        <ul class="project-bullets">
+          <li>Developed a class-based, self-checking testbench (constrained-random generator, driver, monitor, queue-based scoreboard) for a parameterized synchronous FIFO.</li>
+          <li>Implemented 17 bound SVA assertions and 4 covergroups with a coverage-closure loop, reaching 100% functional coverage with 0 scoreboard errors and 0 assertion failures.</li>
+          <li>Injected all 10 deliberate RTL bugs and confirmed the testbench caught each one. Run on Cadence Xcelium.</li>
+        </ul>
         <div class="project-meta">
-          <span class="chip">Verilog</span><span class="chip">ModelSim</span><span class="chip">FSM</span><span class="chip">FPGA</span>
+          <span class="chip">SystemVerilog</span><span class="chip">SVA</span><span class="chip">Covergroups</span><span class="chip">Scoreboard</span><span class="chip">Xcelium</span>
+        </div>
+      </a>
+
+      <a class="project" href="https://github.com/aatifjunaid/UART_Transmitter" target="_blank" rel="noopener">
+        <div class="project-top">
+          <span class="project-name">UART Transmitter</span>
+          <span class="badge badge-amber">Verilog HDL · RTL · Yosys</span>
+        </div>
+        <ul class="project-bullets">
+          <li>Designed an FSM-based UART transmitter (IDLE/START/DATA/STOP) in Verilog with a shift register for serial data.</li>
+          <li>Parameterized baud rate via CLKS_PER_BIT (100 MHz clock → 9600 baud).</li>
+          <li>Verified using a self-checking testbench with a behavioral receiver model as monitor/checker, covering corner-case and random data (15 tests, all passing).</li>
+          <li>Synthesized with Yosys to a gate-level netlist (171 cells, 34 flip-flops) and documented the synthesis results in the repo.</li>
+        </ul>
+        <div class="project-meta">
+          <span class="chip">Verilog HDL</span><span class="chip">FSM</span><span class="chip">RTL</span><span class="chip">Testbench</span><span class="chip">Yosys</span>
         </div>
       </a>
 
       <a class="project" href="https://github.com/aatifjunaid/Blind-Assistance-Wearable" target="_blank" rel="noopener">
         <div class="project-top">
-          <span class="project-name">Blind Assistance Wearable</span>
+          <span class="project-name">Blind Assistance Wearable Device</span>
           <span class="badge badge-gray">Embedded · Arduino</span>
         </div>
-        <p class="project-desc">
-          Wearable obstacle and elevation detection system using Arduino Uno and dual ultrasonic sensors, with buzzer alerts for the user. Built with a 3-person team; handled hardware integration, distance-sensing logic, and enclosure prototyping. Compact and battery-powered for real-world use.
-        </p>
+        <ul class="project-bullets">
+          <li>Designed a wearable obstacle and elevation-change detector on Arduino Uno using 2 ultrasonic sensors, alerting for obstacles within 80 cm and for raised surfaces or drops via downward-sensor thresholds.</li>
+          <li>Implemented priority-based alert logic with 5 distinct buzzer patterns, including a timeout fallback for sensor failures.</li>
+          <li>Collaborated in a 3-member team on hardware integration, testing and enclosure prototyping.</li>
+        </ul>
         <div class="project-meta">
-          <span class="chip">Arduino</span><span class="chip">C++</span><span class="chip">Ultrasonic Sensors</span><span class="chip">Embedded C</span>
+          <span class="chip">Arduino</span><span class="chip">C++</span><span class="chip">Ultrasonic Sensors</span>
         </div>
       </a>
 
@@ -569,15 +596,31 @@
         <div class="tl-content">
           <div class="tl-top">
             <div>
+              <div class="tl-title">Summer Intern</div>
+              <div class="tl-org">Bharat Heavy Electricals Limited (BHEL), Noida</div>
+            </div>
+            <span class="tl-date">Jun – Jul 2026</span>
+          </div>
+          <ul class="tl-bullets">
+            <li>Studied thermal power plant operations and SCADA-based industrial control systems.</li>
+            <li>Gained exposure to plant design tools within the Power Engineering Management department.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl">
+        <div class="tl-line"><div class="tl-circle"></div><div class="tl-track"></div></div>
+        <div class="tl-content">
+          <div class="tl-top">
+            <div>
               <div class="tl-title">Summer Trainee / Intern</div>
               <div class="tl-org">NTPC Limited, Noida</div>
             </div>
             <span class="tl-date">Jun – Jul 2025</span>
           </div>
           <ul class="tl-bullets">
+            <li>Developed a Python/NLP PDF summarizer with Q&A, using document parsing and transformer-based models for automated summarization and natural-language querying of industrial reports.</li>
             <li>Gained exposure to data-centre infrastructure including servers, networking, cooling systems, and power management.</li>
-            <li>Developed a PDF Summarizer with Q&A using Python and NLP, enabling automated report summarization and natural-language querying over industrial documents.</li>
-            <li>Applied transformer-based models for information retrieval from reports; reduced manual extraction effort significantly.</li>
           </ul>
         </div>
       </div>
@@ -592,7 +635,7 @@
             </div>
             <span class="tl-date">2023 – 2027</span>
           </div>
-          <p class="tl-desc">Coursework in digital design, VLSI, embedded systems, signals, and communication systems. Alongside academics, I practise Verilog on HDLBits, build hardware and embedded projects, and explore software development and machine learning through self-driven projects.</p>
+          <p class="tl-desc">Coursework in digital logic design, computer architecture, microprocessor architecture, static timing analysis and embedded systems. Alongside academics, I practise Verilog on HDLBits (170+ solved) and build RTL, verification and embedded projects.</p>
         </div>
       </div>
 
@@ -608,8 +651,16 @@
     <div class="sec-label">Certifications</div>
     <div class="cert-grid">
       <div class="cert-item">
+        <div class="cert-name">VLSI Design Flow: RTL to GDS</div>
+        <div class="cert-by">IIIT Delhi</div>
+      </div>
+      <div class="cert-item">
         <div class="cert-name">Verilog HDL: VLSI Hardware Design Comprehensive Masterclass</div>
         <div class="cert-by">Udemy</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-name">170+ Questions Solved</div>
+        <div class="cert-by">HDLBits</div>
       </div>
       <div class="cert-item">
         <div class="cert-name">Machine Learning Specialization</div>
@@ -677,14 +728,14 @@
   <section id="contact" class="fade">
     <div class="sec-label">Contact</div>
     <p style="font-size:14px;color:var(--muted);line-height:1.8;max-width:480px;">
-      Open to full-time ECE roles — VLSI design and verification, digital design, and embedded systems. I usually respond within 24 hours.
+      Open to full-time ECE roles — design verification, RTL design, VLSI and embedded systems. I usually respond within 24 hours.
     </p>
     <div class="contact-links">
       <a href="mailto:aatiflm10@gmail.com" class="btn btn-primary">aatiflm10@gmail.com</a>
       <a href="https://linkedin.com/in/aatifjunaid" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
       <a href="https://github.com/aatifjunaid" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
       <a href="https://hdlbits.01xz.net/wiki/Special:VlgStats/BC2A40219AFBD89" target="_blank" rel="noopener" class="btn btn-outline">HDLBits</a>
-      <a href="Aatif_Junaid_Resume_CORE.pdf" download class="btn btn-outline">Resume PDF</a>
+      <a href="AatifJunaid_IBM.pdf" download class="btn btn-outline">Resume PDF</a>
     </div>
   </section>
 </div>
